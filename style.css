@@ -78,7 +78,8 @@ li.social-media.instagram a:hover{
 .historia{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-areas: "parrafo-historia" "imagen_historia";
+    grid-template-areas: "parrafo-historia" "imagen_historia"
+    "section-footer";
 }
 /* .historia{
     display: flex;
@@ -188,14 +189,21 @@ textarea{
     margin-bottom: 3%;
 }
 footer{
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-areas: "section-footer";
     text-align: end;
 }
-@media  screen and ( max-width: 760px) {
+@media only screen and ( max-width: 768px) {
     .historia{
-    grid-template-columns: 80%;   
+    grid-template-columns: 70%;   
+    grid-template-rows: 60% 40%;
     grid-template-areas: 
     "parrafo-historia"
     "imagen_historia";
+    }
+    footer{
+        grid-template-columns: 50%;
     }
     
 }
