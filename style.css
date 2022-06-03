@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=BIZ+UDMincho&family=Lobster&family=PT+Sans&family=Palette+Mosaic&family=Roboto+Condensed:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: grid;
+    background-color: rgba(222, 184, 135, 0.664);
+    padding: 20px;
+    font-size: larger;
+}
+
+.nav-link{
+    color: cadetblue;
+}
+.nav-link:hover{
+    color: black;
+}
+.dropdown-menu{
+    background-color: burlywood;
+}
+li.social-media{
+	padding:9px 3px;
+}
+li.social-media a{
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	background-image: url(multimedia/social_media.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	text-indent: -999px;
+	overflow: hidden;
+	transition: background-position .5s;
+	-webkit-transition: background-position .5s;
+}
+li.social-media.facebook a:hover{
+	background-color: rgba(0,0,0,0);
+	background-position: 0 -32px; 
+}
+
+li.social-media.instagram a{
+	background-position: -32px 0px; 
+}
+li.social-media.instagram a:hover{
+	background-color: rgba(0,0,0,0);
+	background-position: -32px -32px; 
+}
+
+
+.section-bienvenidos{
+    margin-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.titulo-bienvenida{
+    color: cadetblue;
+    font-family: 'Aclonica', sans-serif;
+}
+.video{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn-ver-mas{
+    margin-left: 45%;
+}
+.section-1{
+    padding: 10%;
+    display: flex;
+    flex-direction: row;
+}
+.historia{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "parrafo-historia" "imagen_historia";
+}
+/* .historia{
+    display: flex;
+    flex-direction: row;
+} */
+h2{
+    color: cadetblue;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.parrafo-historia{
+    font-size: 20px;
+    margin-right: 2%;
+}
+p{
+    margin-bottom: 3%;
+    margin-top: 5%;
+}
+
+/* .productos-slide{
+    display: flex;
+    flex-direction: row;
+    /* background-image: url(multimedia/fondo-section-2.jpg);
+    background-size: cover;
+    padding:200px; */
+
+.carousel{
+    width: 50%;
+    margin-left: 25%;
+}
+.img-responsive{
+    height: 385px;
+    width: 385px;
+}
+.nuestros_productos .col-lg-4{
+	position: relative;
+	margin-bottom:15px;
+	margin-top:15px;
+}
+.nuestros_productos .col-lg-4 a{
+	position: relative;
+	display: block;
+}
+.nuestros_productos .col-lg-4 img{
+	max-width:100%;
+    
+}
+.nuestros_productos .col-lg-4 h3{
+	position: absolute;
+	top:50%;
+	color:white;
+	font-size: 20px;
+	font-weight: 700;
+	margin-top:-19px;
+	margin-bottom:0;
+	width:100%;
+	text-align: center;
+}
+.section-3{
+    background-image: url(multimedia/pan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color: cadetblue;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 2%;
+    margin-bottom: 5px;
+    color: cadetblue;
+    font-size: larger;
+    font-weight: 600;
+}
+input{
+    border: 2px solid cadetblue;
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+}
+
+.consulta{
+    color: cadetblue;
+    font-weight: 600;
+    font-size: larger;
+}
+textarea{
+    border-color: cadetblue;
+    color: cadetblue;
+    max-width: 50%;
+    
+}
+.btn_formulario{
+    width: auto;
+    border: 1px solid whitesmoke;
+    font-size: larger;
+    font-weight: bold;
+    background-color: cadetblue;
+    color: antiquewhite;
+
+}
+.titulo-ubicacion{
+    margin-bottom: 3%;
+}
+footer{
+    text-align: end;
+}
+@media  screen and ( max-width: 760px) {
+    .historia{
+    grid-template-columns: 80%;   
+    grid-template-areas: 
+    "parrafo-historia"
+    "imagen_historia";
+    }
+    
+}
