@@ -54,8 +54,9 @@ li.social-media.instagram a:hover{
 .section-bienvenidos{
     margin-top: 2%;
     padding-bottom: 2%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "titulo-bienvenida" "video";
 }
 .titulo-bienvenida{
     color: cadetblue;
@@ -71,16 +72,15 @@ li.social-media.instagram a:hover{
     margin-left: 45%;
 }
 .section-1{
-    padding: 10%;
-    display: flex;
-    flex-direction: row;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 100%;
 }
 .historia{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-areas: "parrafo-historia" "imagen_historia"
-    "section-footer";
-}
+    grid-template-areas: "parrafo-historia" "imagen-historia";
+} 
 /* .historia{
     display: flex;
     flex-direction: row;
@@ -142,6 +142,9 @@ p{
     background-image: url(multimedia/pan.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "formulario" "form-text" "consulta" "btn_formulario" ;
 }
 h1{
     color: cadetblue;
@@ -188,22 +191,78 @@ textarea{
 .titulo-ubicacion{
     margin-bottom: 3%;
 }
-footer{
+.section-footer{
     display: grid;
     grid-template-columns:100%;
-    grid-template-areas: "section-footer";
+    grid-template-areas: "footer";
     text-align: end;
 }
-@media only screen and ( max-width: 768px) {
+footer{
+    text-align: end;
+}
+
+@media screen and ( max-width: 320px){
+    .section-bienvenidos{
+        grid-template-columns: 160%;
+        grid-template-areas:"titulo-binvenidos"
+        "video";
+    }
     .historia{
-    grid-template-columns: 70%;   
-    grid-template-rows: 60% 40%;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "parrafo-historia"
+        "img-historia";
+        }
+        .img-historia{
+            width: 300px;
+        }
+        .section-3{
+            grid-template-columns: 180%;
+            grid-template-areas:"formulario""formulario"
+            "form-text" "form-text" 
+            "consulta"
+            "btn_formulario";
+            grid-template-rows: 100px;
+        }
+        .section-footer{
+            grid-template-columns: 100%;
+            grid-template-areas: 
+            "footer";
+        }
+
+}
+
+@media screen and ( max-width: 768px) {
+    .section-bienvenidos{
+        grid-template-columns: 100%;
+        grid-template-areas:"titulo-binvenidos"
+        "video";
+
+    }
+    .historia{
+    grid-template-columns: 100%;
+
     grid-template-areas: 
     "parrafo-historia"
-    "imagen_historia";
+    "img-historia";
     }
-    footer{
+    .img-historia{
+        width: 300px;
+        height: 300px;
+    }
+    .section-footer{
         grid-template-columns: 50%;
     }
     
+}
+
+@media screen and ( max-width: 1200px){
+    .historia{
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "parrafo-historia""img-historia";
+        }
+        footer{
+            grid-template-columns: 50%;
+        }
 }
